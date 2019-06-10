@@ -11,7 +11,8 @@ const cfg = {
       config.plugins.push(new ForkTsCheckerWebpackPlugin())
     }
 
-    // config.resolve.alias.react = require.resolve('react')
+    // Allow to use npm-link
+    config.resolve.alias.react = require.resolve('react')
 
     return config
   }
