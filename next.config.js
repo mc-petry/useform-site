@@ -3,6 +3,7 @@ const withTypescript = require('@zeit/next-typescript')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const cfg = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/useform-site' : '',
   optimizeImages: false,
   webpack(config, options) {
     // Do not run type checking twice:
@@ -10,7 +11,7 @@ const cfg = {
       config.plugins.push(new ForkTsCheckerWebpackPlugin())
     }
 
-    config.resolve.alias.react = require.resolve("react")
+    // config.resolve.alias.react = require.resolve('react')
 
     return config
   }
