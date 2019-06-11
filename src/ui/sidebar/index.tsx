@@ -24,6 +24,7 @@ export function Sidebar() {
     <SidebarItem header="Quick start" link="#quick-start" />
     <SidebarItem header="Demos" link="#demos" />
     <SidebarItem sub header="Simple form" link="#demo-simple-form" />
-    <SidebarItem sub header="Dynamic field" link="#demo-dynamic-field" />
+    <SidebarItem sub header="Dynamic fields" link="#demo-dynamic-fields" />
+    <SidebarItem sub header="Dependent fields" link="#demo-dependent-fields" />
   </div>
 }

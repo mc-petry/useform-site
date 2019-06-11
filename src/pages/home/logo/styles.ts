@@ -12,9 +12,10 @@ export default {
     border-bottom: 1px solid #e2e8ec;
 
     ${mq.mobile} {
-      padding: 38vh 0 0;
+      padding: 0;
       height: calc(100% - 60px);
       text-align: left;
+      display: flex;
     }
   `,
 
