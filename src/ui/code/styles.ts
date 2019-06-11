@@ -3,7 +3,6 @@ import css from '@emotion/css'
 const code = css`
   margin: 0;
   padding: 16px;
-  overflow: auto;
 `
 
 export default {

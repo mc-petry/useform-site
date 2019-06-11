@@ -13,7 +13,7 @@ export default {
 
     ${mq.mobile} {
       padding: 38vh 0 0;
-      height: calc(100vh - 60px);
+      height: calc(100% - 60px);
       text-align: left;
     }
   `,

@@ -1,3 +1,4 @@
+import { mq } from '@app/theme/media'
 import css from '@emotion/css'
 
 export default {
@@ -12,6 +13,10 @@ export default {
     display: flex;
     align-items: center;
     padding-top: 16px;
+
+    ${mq.mobile} {
+      padding-top: 20px;
+    }
   `,
 
   link: css`

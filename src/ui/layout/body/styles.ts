@@ -19,7 +19,6 @@ export default {
     ${mq.mobile} {
       flex: 1;
       border: none;
-      border-bottom: 1px solid #e2e8ec;
       background: none;
     }
   `,

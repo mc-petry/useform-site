@@ -3,14 +3,18 @@ import css from '@emotion/css'
 
 export default {
   wrapper: css`
-    margin: 0 0 60px;
+    margin: 0 0 32px;
+
+    ${mq.mobile} {
+      margin-bottom: 0;
+    }
   `,
 
   header: css`
     color: #555;
     font-size: 20px;
     border-bottom: 1px solid #e1e1e1;
-    padding: 0 0 8px;
+    padding: 24px 0 8px;
     margin: 0 0 32px;
   `,
 
@@ -22,7 +26,6 @@ export default {
 
   code: css`
     flex: 1 0 0;
-    margin: 0 0 20px;
 
     ${mq.mobile} {
       min-height: 50vh;

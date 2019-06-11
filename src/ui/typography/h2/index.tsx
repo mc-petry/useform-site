@@ -5,7 +5,7 @@ const style = css`
   font-weight: bold;
   color: #555;
   padding: 1em 0 0;
-  margin: 0 0 1em;
+  margin: 0 0 .5em;
 `
 
 export function H2({ children, ...rest }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) {

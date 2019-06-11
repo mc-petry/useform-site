@@ -6,9 +6,6 @@ import { Text } from '@app/ui/typography/text'
 import css from '@emotion/css'
 
 const styles = {
-  wrapper: css`
-  `,
-
   code: css`
     max-height: 300px;
 
@@ -19,7 +16,7 @@ const styles = {
 }
 
 export function HomeIntro() {
-  return <div css={styles.wrapper}>
+  return <div>
     <H2 id="quick-start">Quick start</H2>
     <Text>
       <H3>Install the library</H3>
@@ -28,10 +25,10 @@ export function HomeIntro() {
       </Code>
       <H3>Create custom field</H3>
       <Code
-        url="https://raw.githubusercontent.com/mc-petry/redux-handler/master/src/middleware.ts"
+        src="master/src/ui/forms/text-field/index.tsx"
         css={styles.code}
       >{`import { ChangeEvent, useCallback } from 'react'
-import { Field } from 'react-useform'
+import { Field } from '@mc-petry/useform'
 
 function TextField({ field }: { field: Field }) {
   const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) =>

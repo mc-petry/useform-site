@@ -14,6 +14,7 @@ const styles = {
       position: static;
       margin: 0 0 20px;
       padding-top: 18px;
+      border-bottom: 1px solid #e2e8ec;
     }
   `
 }
@@ -22,5 +23,7 @@ export function Sidebar() {
   return <div css={styles.sidebar}>
     <SidebarItem header="Quick start" link="#quick-start" />
     <SidebarItem header="Demos" link="#demos" />
+    <SidebarItem sub header="Simple form" link="#demo-simple-form" />
+    <SidebarItem sub header="Dynamic field" link="#demo-dynamic-field" />
   </div>
 }

@@ -39,9 +39,18 @@ const styles = {
         display: none;
       }
     }
+  `,
+
+  sub: css`
+    padding-left: 80px;
+
+    ${mq.mobile} {
+      padding-left: 16px;
+      font-size: 18px;
+    }
   `
 }
 
-export function SidebarItem({ header, link }: { header: string, link: string }) {
-  return <a css={styles.item} href={link}>{header}</a>
+export function SidebarItem({ header, link, sub }: { header: string, link: string, sub?: boolean }) {
+  return <a css={[styles.item, sub && styles.sub]} href={link}>{header}</a>
 }

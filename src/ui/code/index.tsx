@@ -12,18 +12,36 @@ export enum CodeLang {
 interface Props {
   children?: string
   lang?: CodeLang
-  url?: string
 
   /**
-   * Path to raw file
+   * Github path
    */
   src?: string
 }
 
-export function Code({ children, src, url, lang = CodeLang.TS, ...css }: Props) {
+function getGithubUrl(src: string, type: 'blob' | 'raw') {
+  switch (type) {
+    case 'blob':
+      return `https://github.com/mc-petry/useform-site/${type}/${src}`
+
+    case 'raw':
+      return `https://raw.githubusercontent.com/mc-petry/useform-site/${src}`
+  }
+}
+
+export function Code({ children, src, lang = CodeLang.TS, ...css }: Props) {
   const [source, setSource] = useState('')
 
-  const highlight = useCallback((text: string) => setSource(Prism.highlight(text, Prism.languages[lang], lang)), [lang])
+  const highlight = useCallback((text: string) => {
+    if (lang === CodeLang.TS) {
+      const lines = text.split('\n')
+      const firstLine = lines.findIndex(x => !x.startsWith('import') && x !== '')
+
+      text = lines.slice(firstLine).join('\n')
+    }
+
+    setSource(Prism.highlight(text, Prism.languages[lang], lang))
+  }, [lang])
 
   useEffect(() => {
     if (children) {
@@ -33,16 +51,16 @@ export function Code({ children, src, url, lang = CodeLang.TS, ...css }: Props) 
 
   useEffect(() => {
     if (src && !children) {
-      fetch(src)
+      fetch(getGithubUrl(src, 'raw'), {})
         .then(value => value.text())
         .then(text => highlight(text))
     }
   }, [])
 
   return <>
-    {url &&
+    {src &&
       <div css={styles.sourceLabel}>
-        <a css={styles.sourceLink} href={url} target="_blank">Source</a>
+        <a css={styles.sourceLink} href={getGithubUrl(src, 'blob')} target="_blank">Source</a>
       </div>
     }
     <div css={[styles.wrapper, lang === CodeLang.Markup && styles.langMarkup]} {...css}>

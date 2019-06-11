@@ -9,15 +9,13 @@ export function Demos() {
 
     <DemosWrapper
       header="Simple form"
-      src="https://raw.githubusercontent.com/mc-petry/redux-handler/master/src/middleware.ts"
-      url="https://raw.githubusercontent.com/mc-petry/redux-handler/master/src/middleware.ts"
+      src="master/src/demos/simple/index.tsx"
       children={<DemosSimple />}
     />
 
     <DemosWrapper
       header="Dynamic field"
-      src="https://raw.githubusercontent.com/mc-petry/redux-handler/master/src/middleware.ts"
-      url="https://raw.githubusercontent.com/mc-petry/redux-handler/master/src/middleware.ts"
+      src="master/src/demos/dynamic/index.tsx"
       children={<DemosDynamic />}
     />
   </>

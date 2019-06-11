@@ -27,6 +27,6 @@ export default {
   `,
 
   layout: css`
-
+    height: 100%;
   `
 }
