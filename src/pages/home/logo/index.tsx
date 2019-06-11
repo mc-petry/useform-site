@@ -17,7 +17,7 @@ export function HomeLogo() {
         />
       )}
     </div>
-    <LayoutContainer>
+    <LayoutContainer css={styles.container}>
       <div css={styles.logo}><span>use</span>form</div>
       <div css={styles.slogan}>A TypeScript library for building forms using React</div>
     </LayoutContainer>

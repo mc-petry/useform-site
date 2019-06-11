@@ -41,6 +41,10 @@ export default {
     }
   `,
 
+  container: css`
+    margin: auto 0;
+  `,
+
   blocks: css`
     position: absolute;
     left: 0;
