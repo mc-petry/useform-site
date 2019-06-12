@@ -17,6 +17,11 @@ interface Props {
    * Github path
    */
   src?: string
+
+  /**
+   * Prevent strips imports in TS
+   */
+  fullSource?: boolean
 }
 
 function getGithubUrl(src: string, type: 'blob' | 'raw') {
@@ -29,11 +34,11 @@ function getGithubUrl(src: string, type: 'blob' | 'raw') {
   }
 }
 
-export function Code({ children, src, lang = CodeLang.TS, ...css }: Props) {
+export function Code({ children, src, lang = CodeLang.TS, fullSource, ...css }: Props) {
   const [source, setSource] = useState('')
 
   const highlight = useCallback((text: string) => {
-    if (lang === CodeLang.TS) {
+    if (lang === CodeLang.TS && !fullSource) {
       const lines = text.split('\n')
       const firstLine = lines.findIndex(x => !x.startsWith('import') && x !== '')
 

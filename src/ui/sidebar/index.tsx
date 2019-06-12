@@ -22,6 +22,7 @@ const styles = {
 export function Sidebar() {
   return <div css={styles.sidebar}>
     <SidebarItem header="Quick start" link="#quick-start" />
+    <SidebarItem header="Form defaults" link="#defaults" />
     <SidebarItem header="Demos" link="#demos" />
     <SidebarItem sub header="Simple form" link="#demo-simple-form" />
     <SidebarItem sub header="Dynamic fields" link="#demo-dynamic-fields" />

@@ -1,4 +1,5 @@
 import { Demos } from '@app/demos'
+import { HomeDefaults } from '@app/pages/home/defaults'
 import { HomeIntro } from '@app/pages/home/intro'
 import { HomeLogo } from '@app/pages/home/logo'
 import { Layout } from '@app/ui/layout'
@@ -17,6 +18,7 @@ export default function Home() {
     <HomeLogo />
     <LayoutBody sidebar={<Sidebar />}>
       <HomeIntro />
+      <HomeDefaults />
       {rendered && <Demos />}
     </LayoutBody>
   </Layout>
