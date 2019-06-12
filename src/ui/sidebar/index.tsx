@@ -26,5 +26,6 @@ export function Sidebar() {
     <SidebarItem sub header="Simple form" link="#demo-simple-form" />
     <SidebarItem sub header="Dynamic fields" link="#demo-dynamic-fields" />
     <SidebarItem sub header="Dependent fields" link="#demo-dependent-fields" />
+    <SidebarItem sub header="Transformers" link="#demo-transformers" />
   </div>
 }

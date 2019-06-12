@@ -3,6 +3,7 @@ import { DemosWrapper } from './_wrapper'
 import { DemosDependent } from './dependent'
 import { DemosDynamic } from './dynamic'
 import { DemosSimple } from './simple'
+import { DemosTransformers } from './transformers'
 
 export function Demos() {
   return <>
@@ -24,6 +25,12 @@ export function Demos() {
       header="Dependent fields"
       src="master/src/demos/dependent/index.tsx"
       children={<DemosDependent />}
+    />
+
+    <DemosWrapper
+      header="Transformers"
+      src="master/src/demos/transformers/index.tsx"
+      children={<DemosTransformers />}
     />
   </>
 }
