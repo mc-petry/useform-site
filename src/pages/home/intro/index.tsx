@@ -41,6 +41,7 @@ function TextField({ field }: { field: Field }) {
       ref={field.ref as any}
       value={field.value || ''}
       onChange={onChange}
+      onFocus={field.onFocus}
       onBlur={field.onBlur}
       type="text"
     />

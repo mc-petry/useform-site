@@ -42,7 +42,8 @@ export default {
   `,
 
   container: css`
-    margin: auto 0;
+    margin-top: auto;
+    margin-bottom: auto;
   `,
 
   blocks: css`

@@ -16,12 +16,14 @@ export function DemosDependent() {
       pass: {
         validate: value => (
           !value && 'Password is required'
-        )
+        ),
+        dependent: 'pass2'
       },
 
       pass2: {
-        validate: (value, { pass }) => value !== pass.value && 'Passwords do not match',
-        dependent: 'pass'
+        validate: (value, { pass }) => (
+          value !== pass.value && 'Passwords do not match'
+        )
       }
     },
     submit: values => setResult(values)

@@ -27,6 +27,7 @@ export function TextField({ field, label, ...css }: TextFieldProps) {
       ref={field.ref as RefObject<HTMLInputElement>}
       value={field.value || ''}
       onChange={onChange}
+      onFocus={field.onFocus}
       onBlur={field.onBlur}
       type="text"
       {...css}
