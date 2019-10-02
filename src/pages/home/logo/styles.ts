@@ -3,25 +3,24 @@ import css from '@emotion/css'
 
 export default {
   wrapper: css`
-    padding: 210px 0 210px;
+    padding: 30px 0 34px;
     color: #000;
     font-weight: 300;
     position: relative;
     overflow: hidden;
-    text-align: center;
     border-bottom: 1px solid #e2e8ec;
 
     ${mq.mobile} {
       padding: 0;
-      height: calc(100% - 60px);
+      height: calc(100% - 110px);
       text-align: left;
       display: flex;
     }
   `,
 
   logo: css`
-    font-size: 68px;
-    margin: 0 0 20px;
+    font-size: 32px;
+    margin: 0 0 8px;
     font-weight: bold;
 
     span {
@@ -34,7 +33,7 @@ export default {
   `,
 
   slogan: css`
-    font-size: 30px;
+    font-size: 20px;
 
     ${mq.mobile} {
       font-size: 20px;

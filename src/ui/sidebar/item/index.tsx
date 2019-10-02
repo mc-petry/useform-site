@@ -3,14 +3,16 @@ import css from '@emotion/css'
 
 const styles = {
   item: css`
-    padding: 16px 16px 16px 64px;
+    padding: 16px 16px 16px 32px;
     display: block;
     position: relative;
     transition: all .15s;
     cursor: pointer;
-    font-size: 16px;
-    color: #666;
+    font-size: 14px;
+    color: #dae1ea;
+    font-weight: bold;
     text-decoration: none;
+    transition: all .15s;
 
     ::after {
       content: "";
@@ -20,19 +22,18 @@ const styles = {
       right: 0;
       bottom: 0;
       height: 1px;
-      background: linear-gradient(-90deg, #e2e8ec, transparent);
     }
 
     :hover {
-      background: linear-gradient(-90deg, rgba(0,30,100,.05), transparent);
+      background: rgba(255,255,255,.1);
+      color: #fff;
     }
 
     ${mq.mobile} {
-      color: #09f;
-      font-size: 20px;
-      padding: 0;
+      font-size: 18px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       display: inline;
-      margin: 0 0 20px;
       background: none !important;
 
       ::after {
@@ -42,11 +43,11 @@ const styles = {
   `,
 
   sub: css`
-    padding-left: 80px;
+    font-weight: normal;
 
     ${mq.mobile} {
-      padding-left: 16px;
-      font-size: 18px;
+      /* padding-left: 16px; */
+      /* font-size: 18px; */
     }
   `
 }

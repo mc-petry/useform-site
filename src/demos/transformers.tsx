@@ -1,8 +1,27 @@
 import { Button } from '@app/ui/button'
 import { TextField } from '@app/ui/forms/text-field'
-import { useForm } from '@mc-petry/useform'
-import { useState } from 'react'
-import { DemosResult } from '../_result'
+import { FormOptions, useForm } from '@mc-petry/useform'
+import { useCallback, useState } from 'react'
+import { DemosResult } from './components/result'
+
+interface ErrorTransformer {
+  //
+}
+
+export function useForm2<T extends { [key: string]: any }>(getInitialOptions?: () => FormOptions<T, ErrorTransformer>) {
+  const getOptions = useCallback(() => {
+    const opts: FormOptions<T, ErrorTransformer> = {
+      validateOnChange: true,
+      // ... other defaults like transformers
+
+      ...getInitialOptions ? getInitialOptions() : {}
+    }
+
+    return opts
+  }, [])
+
+  return useForm<T, ErrorTransformer>(getOptions)
+}
 
 interface Form {
   label: string
@@ -38,8 +57,8 @@ export function DemosTransformers() {
       }
     },
     transformers: {
-      label: field => {
-        switch (field.name) {
+      label: name => {
+        switch (name) {
           case 'label':
             return 'Label'
 

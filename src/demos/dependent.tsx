@@ -2,7 +2,7 @@ import { Button } from '@app/ui/button'
 import { TextField } from '@app/ui/forms/text-field'
 import { useForm } from '@mc-petry/useform'
 import { useState } from 'react'
-import { DemosResult } from '../_result'
+import { DemosResult } from './components/result'
 
 interface Form {
   pass: string

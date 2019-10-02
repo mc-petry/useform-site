@@ -12,9 +12,7 @@ export default {
   `,
 
   sidebar: css`
-    flex: 0 0 280px;
-    border-right: 1px solid #e2e8ec;
-    background: linear-gradient(-90deg, #eff7fc, transparent);
+    flex: 0 0 240px;
 
     ${mq.mobile} {
       flex: 1;
@@ -24,7 +22,7 @@ export default {
   `,
 
   children: css`
-    max-width: calc(100% - 280px);
+    max-width: calc(100% - 240px);
     padding: 20px 0 0 48px;
 
     ${mq.mobile} {

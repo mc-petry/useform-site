@@ -1,8 +1,10 @@
 import { H2 } from '@app/ui/typography/h2'
-import { DemosWrapper } from './_wrapper'
+import { DemosArrayObject } from './array-object'
+import { DemosArrayPrimitive } from './array-primitive'
+import { DemosBase } from './base'
+import { DemosWrapper } from './components/wrapper'
 import { DemosDependent } from './dependent'
 import { DemosDynamic } from './dynamic'
-import { DemosSimple } from './simple'
 import { DemosTransformers } from './transformers'
 
 export function Demos() {
@@ -10,27 +12,39 @@ export function Demos() {
     <H2 id="demos">{'Demos'}</H2>
 
     <DemosWrapper
-      header="Simple form"
-      src="master/src/demos/simple/index.tsx"
-      children={<DemosSimple />}
+      header="Base form"
+      src="master/src/demos/base.tsx"
+      children={<DemosBase />}
     />
 
     <DemosWrapper
       header="Dynamic fields"
-      src="master/src/demos/dynamic/index.tsx"
+      src="master/src/demos/dynamic.tsx"
       children={<DemosDynamic />}
     />
 
     <DemosWrapper
       header="Dependent fields"
-      src="master/src/demos/dependent/index.tsx"
+      src="master/src/demos/dependent.tsx"
       children={<DemosDependent />}
     />
 
     <DemosWrapper
       header="Transformers"
-      src="master/src/demos/transformers/index.tsx"
+      src="master/src/demos/transformers.tsx"
       children={<DemosTransformers />}
+    />
+
+    <DemosWrapper
+      header="Array of primitives"
+      src="master/src/demos/array-primitive.tsx"
+      children={<DemosArrayPrimitive />}
+    />
+
+    <DemosWrapper
+      header="Array of objects"
+      src="master/src/demos/array-object.tsx"
+      children={<DemosArrayObject />}
     />
   </>
 }

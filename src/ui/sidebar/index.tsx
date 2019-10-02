@@ -5,16 +5,17 @@ import { SidebarItem } from './item'
 const styles = {
   sidebar: css`
     position: sticky;
-    top: 0;
-    padding: 36px 0 0;
+    top: 20px;
+    margin: 36px 0 0;
+    padding: 16px 0 16px;
     display: flex;
     flex-direction: column;
+    background: #051937;
+    border-radius: 4px;
 
     ${mq.mobile} {
       position: static;
-      margin: 0 0 20px;
-      padding-top: 18px;
-      border-bottom: 1px solid #e2e8ec;
+      margin-bottom: 20px;
     }
   `
 }
@@ -28,5 +29,7 @@ export function Sidebar() {
     <SidebarItem sub header="Dynamic fields" link="#demo-dynamic-fields" />
     <SidebarItem sub header="Dependent fields" link="#demo-dependent-fields" />
     <SidebarItem sub header="Transformers" link="#demo-transformers" />
+    <SidebarItem sub header="Array of primitives" link="#demo-array-of-primitives" />
+    <SidebarItem sub header="Array of objects" link="#demo-array-of-objects" />
   </div>
 }

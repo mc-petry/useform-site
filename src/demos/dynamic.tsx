@@ -1,9 +1,9 @@
 import { Button } from '@app/ui/button'
 import { TextField } from '@app/ui/forms/text-field'
+import css from '@emotion/css'
 import { useForm } from '@mc-petry/useform'
 import { useCallback, useState } from 'react'
-import { DemosResult } from '../_result'
-import styles from './styles'
+import { DemosResult } from './components/result'
 
 const dynamicFieldName = 'dynamic'
 
@@ -46,4 +46,14 @@ export function DemosDynamic() {
     }
     <DemosResult result={getValues()} />
   </form>
+}
+
+const styles = {
+  group: css`
+    display: flex;
+  `,
+
+  remove: css`
+    margin: 22px 0 20px 20px;
+  `
 }

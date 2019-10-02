@@ -1,8 +1,13 @@
+import { mq } from '@app/theme/media'
 import css from '@emotion/css'
 
 const code = css`
   margin: 0;
   padding: 16px;
+
+  ${mq.mobile} {
+    padding: 16px 32px;
+  }
 `
 
 export default {
@@ -12,6 +17,13 @@ export default {
     border: 1px solid #e1e1e1;
     border-radius: 4px;
     overflow: auto;
+
+    ${mq.mobile} {
+      margin: 0 -32px;
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+    }
   `,
 
   code,
