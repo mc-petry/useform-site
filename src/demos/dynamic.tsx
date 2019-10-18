@@ -9,7 +9,7 @@ const dynamicFieldName = 'dynamic'
 
 export function DemosDynamic() {
   const [show, setShow] = useState(true)
-  const { fields, handleSubmit, remove, getValues } = useForm<{ name: string, [key: string]: string }>(() => ({
+  const { fields, handleSubmit, removeField, getValues } = useForm<{ name: string, [key: string]: string }>(() => ({
     fieldConfig: field => {
       if (field === dynamicFieldName) {
         return {
@@ -24,7 +24,7 @@ export function DemosDynamic() {
 
   const handleAddField = useCallback(() => setShow(true), [])
   const handleRemoveField = useCallback(() => {
-    remove(dynamicFieldName)
+    removeField(dynamicFieldName)
     setShow(false)
   }, [])
 

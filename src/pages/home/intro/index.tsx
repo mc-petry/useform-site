@@ -1,7 +1,7 @@
 import { mq } from '@app/theme/media'
 import { Code, CodeLang } from '@app/ui/code'
 import { H2 } from '@app/ui/typography/h2'
-import { H3 } from '@app/ui/typography/h3'
+import { H4 } from '@app/ui/typography/h4'
 import { Text } from '@app/ui/typography/text'
 import css from '@emotion/css'
 
@@ -19,11 +19,11 @@ export function HomeIntro() {
   return <div>
     <H2 id="quick-start">Quick start</H2>
     <Text>
-      <H3>Install the library</H3>
+      <H4>Install the library</H4>
       <Code lang={CodeLang.Markup}>
         {'npm i @mc-petry/useform'}
       </Code>
-      <H3>Create custom field</H3>
+      <H4>Create custom field</H4>
       <Code
         src="master/src/ui/forms/text-field/index.tsx"
         css={styles.code}

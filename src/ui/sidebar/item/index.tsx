@@ -44,6 +44,7 @@ const styles = {
 
   sub: css`
     font-weight: normal;
+    padding-left: 48px;
 
     ${mq.mobile} {
       /* padding-left: 16px; */

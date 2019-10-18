@@ -1,7 +1,7 @@
 import { mq } from '@app/theme/media'
 import { Code } from '@app/ui/code'
-import { H2 } from '@app/ui/typography/h2'
 import { H3 } from '@app/ui/typography/h3'
+import { H4 } from '@app/ui/typography/h4'
 import { Text } from '@app/ui/typography/text'
 import css from '@emotion/css'
 
@@ -15,11 +15,11 @@ const styles = {
   `
 }
 
-export function HomeDefaults() {
+export function HomeRecipesDefaults() {
   return <div>
-    <H2 id="defaults">Form defaults</H2>
+    <H3 id="defaults">Form defaults</H3>
     <Text>
-      <H3>Define your own form factory</H3>
+      <H4>Define your own form factory</H4>
       <Code
         css={styles.code}
         fullSource

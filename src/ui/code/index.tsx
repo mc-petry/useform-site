@@ -40,9 +40,10 @@ export function Code({ children, src, lang = CodeLang.TS, fullSource, ...css }: 
   const highlight = useCallback((text: string) => {
     if (lang === CodeLang.TS && !fullSource) {
       const lines = text.split('\n')
-      const firstLine = lines.findIndex(x => !x.startsWith('import') && x !== '')
+      const firstLine = lines.findIndex(x => x.startsWith('import') && x !== '')
+      const lastLine = lines.findIndex(x => x.startsWith('const styles = {'))
 
-      text = lines.slice(firstLine).join('\n')
+      text = lines.slice(firstLine, lastLine).join('\n')
     }
 
     setSource(Prism.highlight(text, Prism.languages[lang], lang))

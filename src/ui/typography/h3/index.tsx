@@ -2,11 +2,13 @@ import css from '@emotion/css'
 import { ReactNode } from 'react'
 
 const style = css`
-  font-size: 18px;
   color: #555;
-  margin: 2em 0 1em;
+  font-size: 20px;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 24px 0 8px;
+  margin: 0 0 32px;
 `
 
-export function H3({ children, ...rest }: { children: ReactNode }) {
+export function H3({ children, ...rest }: { id?: string, children: ReactNode }) {
   return <h3 css={style} {...rest}>{children}</h3>
 }

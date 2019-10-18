@@ -1,7 +1,7 @@
 import { Button } from '@app/ui/button'
 import { TextField } from '@app/ui/forms/text-field'
 import css from '@emotion/css'
-import { addItem, Field, PrimitiveFormFields, removeItem, useChildForm, useForm } from '@mc-petry/useform'
+import { addFieldItem, Field, PrimitiveFormFields, removeFieldItem, useChildForm, useForm } from '@mc-petry/useform'
 import { useCallback } from 'react'
 import { DemosResult } from './components/result'
 
@@ -21,7 +21,7 @@ export function DemosArrayPrimitive() {
   }))
 
   const handleAdd = useCallback(() => {
-    addItem(fields.names, '')
+    addFieldItem(fields.names, '')
   }, [])
 
   return <form onSubmit={handleSubmit}>
@@ -33,7 +33,7 @@ export function DemosArrayPrimitive() {
         />
         <Button
           css={styles.btnRemove}
-          onClick={() => removeItem(fields.names, i)}
+          onClick={() => removeFieldItem(fields.names, i)}
           children={'X'}
         />
       </div>
