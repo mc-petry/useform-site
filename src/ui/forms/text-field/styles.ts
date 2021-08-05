@@ -1,4 +1,4 @@
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 const input = css`
   border: 1px solid #dddee4;

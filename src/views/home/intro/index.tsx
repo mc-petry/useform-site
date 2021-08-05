@@ -3,7 +3,7 @@ import { Code, CodeLang } from '@app/ui/code'
 import { H2 } from '@app/ui/typography/h2'
 import { H4 } from '@app/ui/typography/h4'
 import { Text } from '@app/ui/typography/text'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 const styles = {
   code: css`

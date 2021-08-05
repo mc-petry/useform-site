@@ -1,26 +1,11 @@
-const withCSS = require('@zeit/next-css')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const path = require('path')
 
-const cfg = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/useform-site' : '',
-  optimizeImages: false,
+module.exports = {
+  reactStrictMode: true,
   webpack(config, options) {
-    // config.plugins = config.plugins.filter(plugin => {
-    //   return plugin.constructor.name !== "ForkTsCheckerWebpackPlugin";
-    // });
-    // only report errors on a matcher that doesn't match anything
-    // config.plugins.push(
-    //   new ForkTsCheckerWebpackPlugin({
-    //     reportFiles: ["does-not-exist"],
-    //   }),
-    // );
-
-
     // Allow to use npm-link
-    config.resolve.alias.react = require.resolve('react')
+    config.resolve.alias.react = path.resolve('./node_modules/react')
 
     return config
   }
 }
-
-module.exports = withCSS(cfg)

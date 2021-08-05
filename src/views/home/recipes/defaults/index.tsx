@@ -3,7 +3,7 @@ import { Code } from '@app/ui/code'
 import { H3 } from '@app/ui/typography/h3'
 import { H4 } from '@app/ui/typography/h4'
 import { Text } from '@app/ui/typography/text'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 const styles = {
   code: css`

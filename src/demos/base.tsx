@@ -32,6 +32,8 @@ export function DemosBase() {
     submit: values => setResult(values)
   }))
 
+  console.log('render')
+
   return <form onSubmit={handleSubmit}>
     <TextField
       field={fields.name}

@@ -1,5 +1,4 @@
-import { Global } from '@emotion/core'
-import 'core-js'
+import { Global } from '@emotion/react'
 import { ReactNode } from 'react'
 import { LayoutFooter } from './footer'
 import styles from './styles'

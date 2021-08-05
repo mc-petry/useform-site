@@ -1,4 +1,4 @@
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 export function DemosResult({ result }: { result: {} | undefined }) {
   return <pre css={styles.result}>

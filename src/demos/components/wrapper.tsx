@@ -1,7 +1,7 @@
 import { mq } from '@app/theme/media'
 import { Code } from '@app/ui/code'
 import { Split } from '@app/ui/split'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 import { ReactNode } from 'react'
 
 interface Props {

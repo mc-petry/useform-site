@@ -1,5 +1,5 @@
 import { mq } from '@app/theme/media'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 const code = css`
   margin: 0;

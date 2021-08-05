@@ -1,4 +1,4 @@
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 
 const style = css`
   font-size: 28px;

@@ -1,6 +1,6 @@
 import { Button } from '@app/ui/button'
 import { TextField } from '@app/ui/forms/text-field'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 import { addFieldItem, Field, removeFieldItem, useChildForm, useForm } from '@mc-petry/useform'
 import { useCallback } from 'react'
 import { DemosResult } from './components/result'
